@@ -1,0 +1,90 @@
+.homePage {
+  background: #f6f6ef;
+  padding: 0.5em 0.75em;
+}
+
+/* .hit {
+  display: flex;
+} */
+
+.hit:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.hitNumber {
+  color: #828282;
+  margin-right: 0.5em;
+}
+
+/* .hitTitle {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.hitLink {
+  font-weight: 500;
+}
+
+.hitLinkVisible {
+  font-size: 0.9rem;
+  color: #828282;
+  word-break: break-all;
+  margin-left: 0.25em;
+}
+
+.hitInfo {
+  font-size: 0.8rem;
+  color: #828282;
+  margin-left: 1.5em;
+}
+
+.hitInfo > :not(:last-child)::after {
+  content: '|';
+  margin: 0 0.5em;
+}
+
+.nextPage {
+  font-weight: 600;
+  color: #828282;
+  margin: 0.5em 1.8em;
+  display: block;
+}
+
+.footer {
+  border-top: 2px solid #ff6600;
+  background: #f6f6ef;
+  padding: 1em 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  text-align: center;
+}
+
+.footerLinks {
+  font-size: 0.7rem;
+}
+
+.footerLinks > :not(:last-child)::after {
+  content: '|';
+  margin: 0 0.5em;
+}
+
+.searchInputLabel {
+  font-size: 0.9rem;
+  margin-right: 0.35em;
+}
+
+.searchInput {
+  font-family: monospace;
+}
+
+.footer > * {
+  margin-bottom: 1em;
+}
+
+@media (max-width: 750px) {
+  .hitLinkVisible {
+    display: block;
+  }
+}

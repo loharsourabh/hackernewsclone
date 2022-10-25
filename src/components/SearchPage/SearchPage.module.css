@@ -1,0 +1,231 @@
+.searchHeader {
+  padding: 0.25em;
+  background: #ff7418;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 48px;
+  margin-right: 0.5em;
+}
+
+.logo > img {
+  width: 100%;
+  display: block;
+}
+
+.searchLabel {
+  font-size: 1.15em;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1em;
+  white-space: nowrap;
+}
+
+.searchBar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 0.45em 0.8em;
+  margin: 0.5em;
+}
+
+.searchIcon {
+  color: #ff742b;
+  margin-right: 0.5em;
+  display: flex;
+}
+
+.searchInput {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000bf;
+  border: 0;
+  flex: 1;
+  outline: 0;
+}
+
+.filters {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+}
+
+.filter:not(:last-child) {
+  margin-right: 1em;
+}
+
+.filterLabel {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-right: 0.5em;
+}
+
+.filterButton {
+  color: #5c5c5c;
+  position: relative;
+  cursor: pointer;
+}
+
+.filterButton.filterVisible .filterOptions {
+  display: block;
+}
+
+.filterButton.filterVisible svg {
+  transform: rotateX(180deg);
+}
+
+.selectedFilter {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  border: 1px solid #c3c3c3;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.selectedFilter > svg {
+  width: 15px;
+  margin-left: 0.5em;
+  transition: transform linear 200ms;
+  transform: rotateX(0deg);
+}
+
+.filterOptions {
+  list-style: none;
+  padding: 0;
+  border: 1px solid black;
+  background: white;
+  border: 1px solid #c3c3c3;
+  border-radius: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  white-space: nowrap;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.10);
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+}
+
+.filterOption {
+  padding: 0.5em 1em;
+}
+
+.filterOption:not(:last-child) {
+  border-bottom: 1px solid #e6e8ea;
+}
+
+.searchResultsInfo {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.content {
+  background: #f6f6ef;
+  padding: 0.5em 0.75em;
+}
+
+.hits {
+  margin-bottom: 1em;
+}
+
+.hitTitle {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hit:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.hitLink {
+  font-weight: 600;
+}
+
+.hitLinkVisible {
+  font-size: 0.9rem;
+  color: #828282;
+  word-break: break-all;
+  margin-left: 0.25em;
+}
+
+.hitInfo {
+  font-size: 0.8rem;
+  color: #828282;
+}
+
+.hitInfo > :not(:last-child):after {
+  content: '|';
+  margin: 0 0.5em;
+}
+
+.hitComment {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0.5em 0 0.8em;
+  color: black;
+  overflow-wrap: break-word;
+}
+
+.hitComment > p {
+  margin: 0 0 0.5em;
+}
+
+.hitComment > pre {
+  white-space: pre-wrap;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.paginationLink {
+  font-size: 0.8rem;
+  min-width: 30px;
+  height: 25px;
+  border: 1px solid #9d9d9d;
+  border-radius: 2px;
+  color: #9d9d9d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.15em;
+}
+
+.paginationLink > svg {
+  width: 18px;
+}
+
+.currentPage {
+  color: #ff742b;
+  border-color: #ff742b;
+}
+
+@media (max-width: 750px) {
+  .searchLabel,
+  .searchResultsInfo {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .filterLabel {
+    display: none;
+  }
+}
