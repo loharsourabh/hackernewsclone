@@ -1,5 +1,5 @@
 function makeUrl(baseUrl, query = {}) {
-  let url = 'http://hn.algolia.com/api/v1' + baseUrl + '?';
+  let url = 'https://hn.algolia.com/api/v1' + baseUrl + '?';
 
   for (let param in query) {
     url += `${param}=${encodeURIComponent(query[param])}&`;
